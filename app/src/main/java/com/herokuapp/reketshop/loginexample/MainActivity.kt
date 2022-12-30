@@ -14,6 +14,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.herokuapp.reketshop.loginexample.ui.theme.LoginExampleTheme
+import com.herokuapp.reketshop.loginexample.userList.UserListScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -25,7 +26,7 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 NavHost(navController = navController , startDestination = "user_list_screen") {
                     composable("user_list_screen") {
-                       // PokemonListScreen(navController = navController)
+                        UserListScreen(navController = navController)
 
                     }
                 }
